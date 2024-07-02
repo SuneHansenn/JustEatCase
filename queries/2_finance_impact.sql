@@ -18,7 +18,7 @@ GROUP BY
     order_uses_new_service;
 
 
--- Same view but grouped on before / after adoption (no difference)
+-- Almost same outcome but grouped on before / after adoption
 WITH
 first_adoption AS (
     SELECT

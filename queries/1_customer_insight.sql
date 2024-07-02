@@ -16,7 +16,7 @@ SELECT DISTINCT
 FROM order_pattern
 GROUP BY orders_per_customer
 ORDER BY orders_per_customer;
--- Average
+-- Same CTE but Average instead of counts
 WITH 
 order_pattern AS (
     SELECT
@@ -32,7 +32,7 @@ SELECT
     AVG(orders_per_customer) FILTER (WHERE customer_segment = 'non-adopter') AS avg_no_new_service
 FROM order_pattern;
 
--- What customers typically order
+-- What customers typically order (cuisine)
 SELECT
     restaurant_cuisine,
     COUNT(gross_order_value) AS times_ordered,
@@ -46,6 +46,6 @@ ORDER BY
 LIMIT 10;
 
 -- Delivery time (proxy for distance assuming fastest route taken)
-;
+
 
 -- Average customer value

@@ -17,5 +17,5 @@ CREATE TABLE public.JustEatCase (
     "courier_id" INT
 );
 
--- Set ownership of tables to the user
+-- Set ownership of tables
 ALTER TABLE public.JustEatCase OWNER TO postgres;

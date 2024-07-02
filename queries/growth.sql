@@ -1,3 +1,4 @@
+-- Show growth of use per month over the year
 WITH monthly_counts AS (
     SELECT
         EXTRACT(MONTH FROM order_date) AS months, 
@@ -12,7 +13,6 @@ WITH monthly_counts AS (
     ORDER BY
         months
 )
-
 SELECT
     months,
     count_no_service,

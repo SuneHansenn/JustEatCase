@@ -1,8 +1,4 @@
-/*
-The query analyses the customer behavior before and after first use to determine if adopters changes behavior
-*/ 
-
--- Count of orders
+-- Count of orders per service and status
 SELECT
     order_uses_new_service,
     order_status_type,
@@ -11,7 +7,7 @@ FROM JustEatCase
 GROUP BY order_uses_new_service, order_status_type
 ORDER BY order_uses_new_service, order_status_type;
 
--- How many use service repeat
+-- Frequency use of service
 WITH service_use AS (
     SELECT
         customer_id,
