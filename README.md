@@ -18,4 +18,3 @@ The above question seeks answer for two distinct areas of the new service being:
 To answer the questions the following method was applied:
 1. Upload csv data to local PostgrSQL DB
 2. Ask relevant question to delimit the problem and find relevant queries
-3. Query the table using SQL for structured information
